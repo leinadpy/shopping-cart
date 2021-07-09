@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 import styles from "../styles/CategoryCard.module.css";
 
 const CategoryCard = ({ image, name }) => {
@@ -12,6 +12,7 @@ const CategoryCard = ({ image, name }) => {
         width={1300}
         alt=""
       />
+      {/* eslint-disable-next-line @next/next/link-passhref */}
       <Link href={`/category/${name.toLowerCase()}`}>
         <div className={styles.info}>
           <h3>{name}</h3>
